@@ -26,7 +26,7 @@ in
   };
 
   config.boot.plymouth = lib.mkIf cfg.enable {
-    font = "${cfg.package}/share/fonts/OTF/Minecraft.otf";
+    font = "${pkgs.minecraftia}/share/fonts/truetype/Minecraftia.ttf";
     theme = "mc";
     themePackages = [ cfg.package ];
   };
@@ -34,5 +34,5 @@ in
   # Required so that the Minecraft font also appears during shutdown.
   # The issue is that Plymouth NixOS module only includes the font
   # inside of the initram and not on the rootfs.
-  config.fonts.packages = lib.mkIf cfg.enable [ cfg.package ];
+  config.fonts.packages = lib.mkIf cfg.enable [ pkgs.minecraftia ];
 }
