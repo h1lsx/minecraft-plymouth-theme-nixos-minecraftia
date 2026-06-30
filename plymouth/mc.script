@@ -60,7 +60,7 @@ scale = Math.Max(scale_width, scale_height, 1);
 scale = Math.Int(Math.Min(6, scale));
 
 
-font = "Minecraft Regular " + 6.8*global.scale;
+font = "Minecraftia Regular " + 6.8*global.scale;
 
 Window.SetBackgroundTopColor(0.5, 0.5, 0.5);
 Window.SetBackgroundBottomColor(0.5, 0.5, 0.5);
